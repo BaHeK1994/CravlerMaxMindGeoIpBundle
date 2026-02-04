@@ -1,0 +1,11 @@
+services:
+    'Cravler\MaxMindGeoIpBundle\Service\GeoIpService':
+        alias: cravler_max_mind_geo_ip.service.geo_ip_service
+
+    'cravler_max_mind_geo_ip.service.geo_ip_service':
+        class: Cravler\MaxMindGeoIpBundle\Service\GeoIpService
+        public: true
+
+    'cravler_max_mind_geo_ip.command.update_database_command':
+        class: Cravler\MaxMindGeoIpBundle\Command\UpdateDatabaseCommand
+        tags: [ 'console.command' ]
